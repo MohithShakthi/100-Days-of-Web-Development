@@ -1,0 +1,11 @@
+* {
+    background-color: black;
+}
+.container{
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+}
+#image {
+    border: white solid 5px;
+}
