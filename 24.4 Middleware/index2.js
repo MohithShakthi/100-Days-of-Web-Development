@@ -1,12 +1,14 @@
 import express from "express";
+import morgan from "morgan";
+let app = express();
+let port = 3000;
 
-const app = express();
-const port = 3000;
+app.use(morgan("tiny"));
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+app.listen(port , () => {
+  console.log(`listning on port: ${port}`);
+})
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+app.get("/", (req , res ) => {
+  res.send("<h1>Hello</h1>");
+})
